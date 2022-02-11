@@ -221,7 +221,6 @@ body {
 }
 /* _footer */
 footer {
-  width: 100%;
   background-color: #353535;
   color: #ebe5e5;
   padding: 25px 20px 30px 20px;
@@ -251,4 +250,33 @@ ul .fas {
 
 ul li {
   margin-bottom: 5px;
+}
+
+header .fa-arrow-left {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+header .fa-arrow-left:visited {
+  color: black;
+}
+
+.fa-arrow-left {
+  font-size: 20px;
+}
+
+.image-menu {
+  width: 100%;
+}
+
+.section__menu {
+  background-color: #f6f6f6;
+  padding: 40px 30px;
+  border-radius: 35px 35px 0 0;
+  transform: translateY(-50px);
+}
+.restaurant-title {
+  font-family: "Shrikhand", cursive;
+  display: flex;
 }
