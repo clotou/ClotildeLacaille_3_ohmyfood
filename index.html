@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="./public/css/style.css" rel="stylesheet" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
       rel="stylesheet"
@@ -22,18 +23,22 @@
       <img src="./images/logo/ohmyfood.png" alt="oh my food logo">
       </div>
       <div class="header__localisation">
-        <i class="fas fa-map-marker-alt"></i>
-        <p>Paris, Belleville</p>
+        <div class="header__localisation-text">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Paris, Belleville</p>
+        </div>
       </div>
       <div class="header__marketing">
         <h2>Réservez le menu qui vous convient</h2>
         <small
-          >Découvrez des restaurants d'exception, sélectionnés par cnos
+          >Découvrez des restaurants d'exception, sélectionnés par nos
           soins.</small
         >
-        <button type="text">
-          <a href="#restaurants">Explorez nos restaurants</a>
-        </button>
+
+          <a class="button" href="#restaurants">
+            <div class="button-text">Explorez nos restaurants</div>
+          </a>
+        </div>
       </div>
     </header>
     <main>
@@ -72,10 +77,10 @@
         <h2>Restaurants</h2>
         <div class="all-restaurants">
           <!--1-Ménilmontant Card-->
-          <a href="./views/menilmontant.html" class="restaurant__card" id="menilmontant">
-            <img src="#" />
-            <div class="restaurant-label">Nouveau</div>
-            <div class="restaurant-infos">
+           <a href="./views/menilmontant.html"
+          class="restaurant__card" id="menilmontant">
+            <div class="restaurant__card-image-palette"><div class="restaurant-label">Nouveau</div></div>
+            <div class="restaurant__card-infos">
               <div>
                 <h3>La palette du gôut</h2>
                 <p>Ménilmontant</p>
@@ -86,9 +91,8 @@
 
           <!--2-Charonne Card-->
           <a href="./views/charonne.html" class="restaurant__card" id="charonne">
-            <img src="#" />
-            <div class="restaurant-label">Nouveau</div>
-            <div class="restaurant-infos">
+            <div class="restaurant__card-image-note"><div class="restaurant-label">Nouveau</div></div>
+            <div class="restaurant__card-infos">
               <div>
                 <h3>La note enchantée</h2>
                 <p>Charonne</p>
@@ -99,9 +103,8 @@
 
           <!--3-Cité Rouge Card-->
           <a href="./views/citerouge.html" class="restaurant__card" id="citerouge">
-            <img src="#" />
-            <div class="restaurant-label">Nouveau</div>
-            <div class="restaurant-infos">
+            <div class="restaurant__card-image-francaise"></div>
+            <div class="restaurant__card-infos">
               <div>
                 <h3>À la française</h2>
                 <p>Cité Rouge</p>
@@ -112,9 +115,8 @@
 
           <!--4-Folie-Méricourt-->
           <a href="./views/delice.html" class="restaurant__card" id="mericourt">
-            <img src="#" />
-            <div class="restaurant-label">Nouveau</div>
-            <div class="restaurant-infos">
+            <div class="restaurant__card-image-delice"></div>
+            <div class="restaurant__card-infos">
               <div>
                 <h3>Le délice des sens</h2>
                 <p>Folie-Méricourt</p>

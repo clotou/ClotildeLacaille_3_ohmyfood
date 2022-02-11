@@ -1,325 +1,254 @@
-*,
-*::after,
-*::before {
+/* _base */
+* {
   margin: 0;
-  padding: 0;
-  box-sizing: inherit;
 }
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  box-sizing: border-box;
-  background: #001534;
-}
-
+/* _typography */
 body {
   font-family: "Roboto", sans-serif;
-  color: #15dea5;
-  font-size: 2rem;
-  font-weight: 100;
-  line-height: 1.7;
 }
-
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 5rem;
-  font-style: italic;
-}
-
-textarea {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 2rem;
-}
-
-button {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 2.75rem;
-}
-
-.btn {
-  padding: 1.5rem;
-  border: 0.1rem solid #15dea5;
-  color: #15dea5;
-  background: #001534;
-  cursor: pointer;
-}
-.btn:hover {
-  background: #15dea5;
-  color: #d6fff5;
-}
-.btn--full-width {
+/* _header */
+.header__logo {
   width: 100%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.header__logo img {
+  width: 50%;
+  margin: 15px 0 10px 0;
 }
 
-.header {
-  background: #15dea5;
-  height: 10rem;
+.header__localisation {
+  width: 100%;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 2px 1px 0px rgb(0 0 0 / 10%);
+  padding: 15px 0 15px 0;
+}
+.fa-map-marker-alt {
+  transform: translateX(-20px);
+}
+.header__localisation-text {
+  display: flex;
+  justify-content: center;
+}
+.header__marketing {
+  background-color: #f6f6f6;
+  padding: 40px 35px 50px 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.header__marketing h2 {
+  padding: 0 10px 20px 10px;
+}
+.header__marketing small {
+  font-size: 18px;
+  font-weight: 200;
+  padding-bottom: 30px;
+}
+
+/* _button --> attention, bien changer les couleurs avec les variables*/
+.button {
+  width: 200px;
+  color: white;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  border-radius: 50px;
+  padding: 17px 15px;
+}
+.header__marketing a {
+  margin: auto;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
+}
+
+/* _home */
+.main__fonctionnement {
+  padding: 35px 20px;
+}
+
+.main__fonctionnement h2 {
+  margin-bottom: 30px;
+}
+
+/* _button */
+.all-steps a {
+  text-decoration: none;
+}
+.fonctionnement__step {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.header__logo {
-  font-size: 7rem;
-  color: #001534;
-  margin-left: 10rem;
-  text-shadow: 0.55rem 0.55rem #fff;
+  margin-bottom: 20px;
 }
 
-.nav {
-  padding-right: 6rem;
-  flex: 2 1 auto;
-  text-align: right;
+.step__content {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 25px 25px;
+  border-radius: 18px;
+  width: 300px;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
 }
-.nav__link {
-  display: inline;
-  font-size: 3rem;
-  padding-left: 1.5rem;
+
+.step__content:hover {
+  background-color: #f5edff;
 }
-.nav__link a {
+.step__content:hover .fas {
+  color: #9356dc;
+}
+
+.step__content:active {
+  background-color: #f5edff;
+}
+.step__content:active .fas {
+  color: #9356dc;
+}
+.step__numero {
+  color: white;
+  background-color: #9356dc;
+  border-radius: 50px;
+  width: 18px;
+  height: 22px;
+  padding-left: 8px;
+  padding-top: 3px;
+  transform: translateX(8px);
+}
+
+.fa-mobile-alt,
+.fa-list-ul,
+.fa-store {
+  color: #7e7e7e;
+  font-size: 20px;
+}
+.step__content p {
+  margin-left: 25px;
+}
+
+.main__restaurants {
+  background: #f6f6f6;
+  padding: 35px 20px;
+}
+
+/* _cards */
+.main__restaurants h2 {
+  margin-bottom: 30px;
+}
+.all-restaurants a {
   text-decoration: none;
-  color: #d6fff5;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
 }
-.nav__link--active {
-  color: #001534;
+.all-restaurants a:visited {
+  color: black;
 }
-.nav__link--active:hover {
-  cursor: default;
-  color: #001534;
-}
-.nav__link a:hover {
-  color: #fff;
-}
-
-.container {
-  margin: 6rem;
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  border: 0.1rem solid #d6fff5;
-}
-
-.form {
-  width: 100%;
-  padding-bottom: 1.5rem;
-}
-.form__heading {
-  width: 100%;
-  color: #fff;
-  text-shadow: 0.55rem 0.55rem #11af82;
-  background: #15dea5;
-  line-height: 5rem;
-  padding: 1.5rem;
-}
-.form__field label {
-  color: #d6fff5;
+.restaurant__card {
   display: block;
-  font-size: 2rem;
-  line-height: 2rem;
-  padding-top: 1.5rem;
-}
-.form__field input {
-  width: 100%;
-  background: #001534;
-  border: 0.1rem solid #15dea5;
-  padding: 1.5rem;
-  color: #d6fff5;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 2.75rem;
-  border: 0.1rem solid #15dea5;
-  background-color: #001534;
-  color: #15dea5;
-}
-.form__field textarea {
-  width: 100%;
-  color: #15dea5;
-  background: #001534;
-  border: 0.1rem solid #15dea5;
-  outline: none;
-  padding: 1.5rem;
-  margin-bottom: 0.75rem;
+  border-radius: 15px;
+  margin-bottom: 17px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
 }
 
-.quote {
-  text-align: right;
-  font-size: 6rem;
-  font-weight: 900;
-  font-style: italic;
-  color: #d6fff5;
-  margin: 2rem 6rem -3rem 6rem;
-}
-.quote strong {
-  color: #15dea5;
-}
-
-.proj-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1.5rem;
-}
-
-.proj-prev {
-  color: #fff;
-  margin-bottom: 1.5rem;
-}
-.proj-prev__image {
-  margin: 0;
-  opacity: 0.2;
+.restaurant__card-image-palette {
   width: 100%;
-  display: block;
-  overflow: hidden;
-  padding-top: 56.25%;
+  height: 173px;
+  background-position-y: 100%;
+  background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant__card-image-note {
+  width: 100%;
+  height: 173px;
+  background-position-y: 61%;
+  background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant__card-image-francaise {
+  width: 100%;
+  height: 173px;
+  background-position-y: 100%;
+  background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant__card-image-delice {
+  width: 100%;
+  height: 173px;
+  background-position-y: 100%;
+  background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurant-label {
   position: relative;
-}
-.proj-prev__image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-}
-.proj-prev__heading {
-  font-size: 4rem;
-  padding-left: 2.5rem;
-  margin: 0;
-  line-height: 6rem;
-}
-.proj-prev__byline {
-  padding-left: 2.5rem;
-  font-size: 1.66rem;
-}
-.proj-prev:hover {
-  cursor: pointer;
-}
-.proj-prev:hover > .proj-prev__heading {
-  background: #15dea5;
-}
-.proj-prev:hover > .proj-prev__image {
-  opacity: 1;
+  left: 70%;
+  top: 7%;
+  background-color: #99e2d0;
+  color: #008d47;
+  width: 70px;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 2px;
 }
 
-.about {
+.restaurant__card-infos {
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 13px 25px 15px 13px;
+}
+
+.restaurant__card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.restaurant__card p {
+  opacity: 0.7;
+}
+
+.fa-heart {
+  font-size: 20px;
+  opacity: 0.6;
+}
+/* _footer */
+footer {
   width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 5fr;
-  grid-template-rows: repeat(3, auto);
-  padding: 1.5rem;
-  grid-template-areas: "imagery heading" "imagery copy" "imagery btn";
-  margin-bottom: 1.5rem;
+  background-color: #353535;
+  color: #ebe5e5;
+  padding: 25px 20px 30px 20px;
 }
-.about__heading {
-  grid-area: heading;
-  color: #fff;
-  text-shadow: 0.55rem 0.55rem #11af82;
-  text-align: right;
-  padding-right: 1.5rem;
+footer img {
+  width: 90px;
+  filter: invert(1);
+  margin-bottom: 18px;
 }
-.about__imagery {
-  grid-area: imagery;
-}
-.about__pic {
-  overflow: hidden;
-  width: 80%;
-  border-radius: 1000rem;
-  border: 1.5rem solid #15dea5;
-}
-.about__pic img {
-  display: block;
-  width: 100%;
-}
-.about__copy {
-  grid-area: copy;
-}
-.about__copy p {
-  line-height: 2.4rem;
-  margin-bottom: 3.375rem;
-}
-.about__btn {
-  padding: 1.5rem;
-  border: 0.1rem solid #15dea5;
-  color: #15dea5;
-  background: #001534;
-  cursor: pointer;
-  grid-area: btn;
-}
-.about__btn:hover {
-  background: #15dea5;
-  color: #d6fff5;
-}
-.about__btn--full-width {
-  width: 100%;
-  margin: 0 auto;
-}
-.about__btn a {
+footer a {
   text-decoration: none;
 }
 
-.project {
-  width: 100%;
-  margin-bottom: 1.8rem;
-  display: grid;
-  grid-template-columns: 5fr 3fr;
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 1.5rem;
-  grid-template-areas: "image synopsis" "tags synopsis" "btn btn";
+footer a:visited {
+  color: #ebe5e5;
 }
-.project__image {
-  grid-area: image;
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
-.project__image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
+
+ul .fas {
+  padding-right: 12px;
+  font-size: 12px;
 }
-.project__synopsis {
-  grid-area: synopsis;
-  padding-left: 1.5rem;
-}
-.project__synopsis h1 {
-  color: #fff;
-  text-shadow: 0.55rem 0.55rem #11af82;
-}
-.project__synopsis p {
-  line-height: 2.5rem;
-}
-.project__tags {
-  grid-area: tags;
-}
-.project__tags p {
-  color: #fff;
-}
-.project__tags p strong {
-  color: #15dea5;
-  font-weight: 900;
-  font-style: italic;
-}
-.project__btn {
-  padding: 1.5rem;
-  border: 0.1rem solid #15dea5;
-  color: #15dea5;
-  background: #001534;
-  cursor: pointer;
-  grid-area: btn;
-}
-.project__btn:hover {
-  background: #15dea5;
-  color: #d6fff5;
-}
-.project__btn--full-width {
-  width: 100%;
-  margin: 0 auto;
+
+ul li {
+  margin-bottom: 5px;
 }
