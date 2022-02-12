@@ -1,6 +1,7 @@
 /* _base */
 * {
   margin: 0;
+  padding: 0;
 }
 /* _typography */
 body {
@@ -11,6 +12,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: #f6f4f4;
 }
 .header__logo img {
   width: 50%;
@@ -49,7 +51,7 @@ body {
 
 /* _button --> attention, bien changer les couleurs avec les variables*/
 .button {
-  width: 200px;
+  /* width: 200px; */
   color: white;
   background: linear-gradient(to top, #9356dc, #ff79da);
   border-radius: 50px;
@@ -232,6 +234,7 @@ footer img {
 }
 footer a {
   text-decoration: none;
+  color: #ebe5e5;
 }
 
 footer a:visited {
@@ -258,7 +261,7 @@ header .fa-arrow-left {
   margin-left: 15px;
 }
 
-header .fa-arrow-left:visited {
+header a {
   color: black;
 }
 
@@ -271,12 +274,80 @@ header .fa-arrow-left:visited {
 }
 
 .section__menu {
-  background-color: #f6f6f6;
-  padding: 40px 30px;
+  background-color: #f6f4f4;
+  padding: 40px 20px 40px 20px;
   border-radius: 35px 35px 0 0;
   transform: translateY(-50px);
 }
 .restaurant-title {
   font-family: "Shrikhand", cursive;
+  font-size: 18px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-heart {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.section__menu-step {
+  margin-bottom: 40px;
+}
+.section__menu-step h4 {
+  font-weight: 300;
+  margin-bottom: 14px;
+  margin-top: 30px;
+}
+h4:after {
+  display: flex;
+  content: "";
+  background: #99e2d0;
+  margin-top: 5px;
+  width: 40px;
+  height: 3px;
+}
+
+.menu-step-choice {
+  border-radius: 16px;
+  /* width: 338px; */
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+.choice-info {
+  padding: 13px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+h5 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.choice-text small {
+  font-size: 15px;
+  font-weight: 300;
+}
+.prix {
+  font-weight: 500;
+  margin-right: 5px;
+  color: #353535;
+}
+.choice-validation {
+  display: none;
+}
+
+.section__menu a {
+  margin: auto;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
+}
+
+.button-commande {
+  margin: 0 75px;
 }
