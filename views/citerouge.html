@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
+    <link href="../public/css/style.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -19,15 +20,17 @@
   <body>
     <header>
       <a href="../index.html#citerouge"><i class="fas fa-arrow-left"></i></a>
-      <img src="/images/logo/ohmyfood.png" alt="Oh my food logo" />
+      <div class="header__logo">
+        <img src="../images/logo/ohmyfood.png" alt="Oh my food logo" />
+      </div>
     </header>
     <img
       class="image-menu"
       src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
       alt="Lapalette du gout"
     />
-    <section>
-      <div>
+    <section class="section__menu">
+      <div class="restaurant-title">
         <h1>À la française</h1>
         <i class="far fa-heart"></i>
       </div>
@@ -36,33 +39,39 @@
         <h4>ENTRÉES</h4>
         <!--CHOICE 1-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Tartare de poulpe acidulé</h5>
-            <small>Aux zestes d'orange</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Tartare de poulpe acidulé</h5>
+              <small>Aux zestes d'orange</small>
+            </div>
+            <div class="prix">25€</div>
           </div>
-          <div class="prix">25€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
         <!--CHOICE 2-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Velouté de légumes d'antan</h5>
-            <small>Carotte, panais, topinambour</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Velouté de légumes d'antan</h5>
+              <small>Carotte, panais, topinambour</small>
+            </div>
+            <div class="prix">35€</div>
           </div>
-          <div class="prix">35€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
         <!--CHOICE 3-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Soupe à l'oignon</h5>
-            <small>Revisitée</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Soupe à l'oignon</h5>
+              <small>Revisitée</small>
+            </div>
+            <div class="prix">20€</div>
           </div>
-          <div class="prix">20€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
@@ -74,33 +83,39 @@
         <h4>PLATS</h4>
         <!--CHOICE 1-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Coquilles Saint-Jacques</h5>
-            <small>Accompagnées d'une purée de panais</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Coquilles Saint-Jacques</h5>
+              <small>Accompagnées d'une purée de panais</small>
+            </div>
+            <div class="prix">40€</div>
           </div>
-          <div class="prix">40€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
         <!--CHOICE 2-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Magret de canard</h5>
-            <small>Et parmentier de pommes de terres</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Magret de canard</h5>
+              <small>Et parmentier de pommes de terres</small>
+            </div>
+            <div class="prix">35€</div>
           </div>
-          <div class="prix">35€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
         <!--CHOICE 3-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Pigeonneau d'Ile-et-Vilaine</h5>
-            <small>Sur son lit de gnocchis aux légumes</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Pigeonneau d'Ile-et-Vilaine</h5>
+              <small>Sur son lit de gnocchis aux légumes</small>
+            </div>
+            <div class="prix">44€</div>
           </div>
-          <div class="prix">44€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
@@ -112,44 +127,52 @@
         <h4>DESSERTS</h4>
         <!--CHOICE 1-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Pétales de violettes glacés</h5>
-            <small>Et purée de noisette</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Pétales de violettes glacés</h5>
+              <small>Et purée de noisette</small>
+            </div>
+            <div class="prix">18€</div>
           </div>
-          <div class="prix">18€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
         <!--CHOICE 2-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Fondant au chocolat</h5>
-            <small>Revisité</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Fondant au chocolat</h5>
+              <small>Revisité</small>
+            </div>
+            <div class="prix">22€</div>
           </div>
-          <div class="prix">22€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
         <!--CHOICE 3-->
         <div class="menu-step-choice">
-          <div class="choice-text">
-            <h5>Millefeuille croustillant</h5>
-            <small>Myrtilles et pâte d'amande</small>
+          <div class="choice-info">
+            <div class="choice-text">
+              <h5>Millefeuille croustillant</h5>
+              <small>Myrtilles et pâte d'amande</small>
+            </div>
+            <div class="prix">23€</div>
           </div>
-          <div class="prix">23€</div>
           <div class="choice-validation">
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
       </div>
-      <button type="text">
-        <a href="#restaurants">Commander</a>
-      </button>
+      <div class="button-commande">
+        <a class="button" href="#restaurants">
+          <div class="button-text">Commander</div>
+        </a>
+      </div>
     </section>
     <footer>
-      <img src="./images/logo/ohmyfood.png" alt="oh my food logo" />
+      <img src="../images/logo/ohmyfood.png" alt="oh my food logo" />
       <ul>
         <li>
           <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
