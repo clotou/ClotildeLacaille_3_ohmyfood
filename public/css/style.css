@@ -15,7 +15,7 @@ body {
   background-color: #f6f4f4;
 }
 .header__logo img {
-  width: 50%;
+  max-width: 160px;
   margin: 15px 0 10px 0;
 }
 
@@ -271,13 +271,16 @@ header a {
 
 .image-menu {
   width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
 .section__menu {
   background-color: #f6f4f4;
   padding: 40px 20px 40px 20px;
   border-radius: 35px 35px 0 0;
-  transform: translateY(-50px);
+  margin-top: 200px;
+  z-index: 1;
 }
 .restaurant-title {
   font-family: "Shrikhand", cursive;
