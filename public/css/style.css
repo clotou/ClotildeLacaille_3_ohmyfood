@@ -275,6 +275,9 @@ header a {
   z-index: -1;
 }
 
+.charonne {
+  top: -50px;
+}
 .section__menu {
   background-color: #f6f4f4;
   padding: 40px 20px 40px 20px;
