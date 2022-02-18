@@ -316,22 +316,30 @@ h4:after {
 
 .menu-step-choice {
   border-radius: 16px;
-  /* width: 338px; */
   color: black;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
   margin-bottom: 15px;
   background-color: white;
+  display: flex;
+  justify-content: space-between;
 }
 .choice-info {
   padding: 13px;
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   justify-content: space-between;
 }
 h5 {
   font-size: 17px;
   font-weight: 500;
   margin-bottom: 5px;
+}
+
+/* .choice-text {
+  text-overflow: ellipsis;
+} */
+.prix-validation {
+  display: flex;
 }
 .choice-text small {
   font-size: 15px;
@@ -341,9 +349,40 @@ h5 {
   font-weight: 500;
   margin-right: 5px;
   color: #353535;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 20px 13px 0px;
 }
+
 .choice-validation {
-  display: none;
+  width: 0px;
+  border-radius: 0 16px 16px 0;
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  transition: all 1s ease;
+}
+.menu-step-choice:hover .choice-validation {
+  width: auto;
+  border-radius: 0 16px 16px 0;
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  transition: all 1s ease;
+}
+.menu-step-choice:hover.choice-info {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-step-choice:hover {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-check-circle {
+  color: white;
+  font-size: 35px;
+  margin: 0 20px;
 }
 
 .section__menu a {
