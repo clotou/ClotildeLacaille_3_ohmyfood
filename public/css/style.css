@@ -335,9 +335,16 @@ h5 {
   margin-bottom: 5px;
 }
 
-/* .choice-text {
+.choice-text,
+h5,
+p {
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
-} */
+  flex-shrink: 1;
+  /* width: 100%;
+  transition: 0.5s ease-in-out; */
+}
 .prix-validation {
   display: flex;
 }
@@ -364,10 +371,6 @@ h5 {
 }
 .menu-step-choice:hover .choice-validation {
   width: auto;
-  border-radius: 0 16px 16px 0;
-  background-color: #99e2d0;
-  display: flex;
-  align-items: center;
   transition: all 1s ease;
 }
 .menu-step-choice:hover.choice-info {
