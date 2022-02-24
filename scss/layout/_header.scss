@@ -1,5 +1,52 @@
 .header__logo {
-  width: 50%;
-  text-align: center;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  background-color: $color-background-sections;
+  img {
+    max-width: 160px;
+    margin: 15px 0 10px 0;
+  }
+}
+
+.header__localisation {
+  width: 100%;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.1);
+  padding: 15px 0 15px 0;
+  &-text {
+    display: flex;
+    justify-content: center;
+  }
+}
+.fa-map-marker-alt {
+  transform: translateX(-20px);
+}
+.header__marketing {
+  background-color: #f6f6f6;
+  padding: 40px 35px 50px 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  h2 {
+    padding: 0 10px 20px 10px;
+  }
+  small {
+    font-size: 18px;
+    font-weight: 200;
+    padding-bottom: 30px;
+  }
+}
+
+header {
+  .fa-arrow-left {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 20px;
+  }
+  a {
+    color: black;
+  }
 }

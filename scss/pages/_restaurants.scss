@@ -1,42 +1,112 @@
-// .project {
-//     width: 100%;
-//     margin-bottom: $grid-gutter*1.2;
-//     display: grid;
-//     grid-template-columns: 5fr 3fr;
-//     grid-template-rows: repeat(3, auto);
-//     grid-gap: $grid-gutter;
-//     grid-template-areas:
-//         "image synopsis"
-//         "tags synopsis"
-//         "btn btn";
-//     &__image {
-//         grid-area: image;
-//         @include img-ratio;
-//     }
-//     &__synopsis {
-//         grid-area: synopsis;
-//         padding-left: $grid-gutter;
-//         & h1 {
-//             color: $colour-white;
-//             @include heading-shadow;
-//         }
-//         & p {
-//             line-height: 2rem*1.25;
-//         }
-//     }
-//     &__tags {
-//         grid-area: tags;
-//         & p {
-//             color: $colour-white;
-//             & strong {
-//                 color: $colour-primary;
-//                 font-weight: 900;
-//                 font-style: italic;
-//             }
-//         }
-//     }
-//     &__btn {
-//         @include btn;
-//         grid-area: btn;
-//     }
-// }
+.restaurant-title {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image-menu {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.charonne {
+  top: -50px;
+}
+.section__menu {
+  background-color: #f6f4f4;
+  padding: 40px 20px 40px 20px;
+  border-radius: 35px 35px 0 0;
+  margin-top: 200px;
+  z-index: 1;
+  a {
+    margin: auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    @include default-box-shadow;
+  }
+  &--step {
+    margin-bottom: 40px;
+  }
+  &--choice {
+    border-radius: 16px;
+    color: black;
+    @include default-box-shadow;
+    margin-bottom: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+      display: flex;
+      justify-content: space-between;
+    }
+    &:hover .section__addition--validation {
+      width: auto;
+      transition: all 1s ease;
+    }
+    &:hover.section__section__menu--info {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &--info {
+    padding: 13px;
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: space-between;
+  }
+  &--text small {
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
+
+.section__addition {
+  display: flex;
+  &--prix {
+    font-weight: 500;
+    margin-right: 5px;
+    color: #353535;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 20px 13px 0px;
+  }
+  &--validation {
+    width: 0px;
+    border-radius: 0 16px 16px 0;
+    background-color: $colour-tertiary;
+    display: flex;
+    align-items: center;
+    transition: all 1s ease;
+  }
+}
+.fa-heart {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+h4:after {
+  display: flex;
+  content: "";
+  background: $colour-tertiary;
+  margin-top: 5px;
+  width: 40px;
+  height: 3px;
+}
+.section__menu--text,
+h5,
+p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+  /* width: 100%;
+  transition: 0.5s ease-in-out; */
+}
+
+.fa-check-circle {
+  color: white;
+  font-size: 35px;
+  margin: 0 20px;
+}

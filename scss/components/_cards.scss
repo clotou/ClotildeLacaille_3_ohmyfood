@@ -1,0 +1,58 @@
+.restaurant__card {
+  display: block;
+  border-radius: 15px;
+  margin-bottom: 17px;
+  @include default-box-shadow;
+  &--image-palette {
+    @include card-image;
+    background-position-y: 100%;
+    background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  }
+  &--image-note {
+    @include card-image;
+    background-position-y: 61%;
+    background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  }
+  &--image-francaise {
+    @include card-image;
+    background-position-y: 100%;
+    background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  }
+  &--image-delice {
+    @include card-image;
+    background-position-y: 100%;
+    background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  }
+  &--label {
+    position: relative;
+    left: 70%;
+    top: 7%;
+    background-color: $colour-tertiary;
+    color: #008d47;
+    width: 70px;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 2px;
+  }
+  &--infos {
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 13px 25px 15px 13px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  p {
+    opacity: 0.7;
+  }
+}
+
+.fa-heart {
+  font-size: 20px;
+  opacity: 0.6;
+}

@@ -1,46 +1,70 @@
-// .about {
-//   width: 100%;
-//   display: grid;
-//   grid-template-columns: 2fr 5fr;
-//   grid-template-rows: repeat(3, auto);
-//   padding: $grid-gutter;
-//   grid-template-areas:
-//     "imagery heading"
-//     "imagery copy"
-//     "imagery btn";
-//   margin-bottom: $grid-gutter;
-//   &__heading {
-//     grid-area: heading;
-//     color: $colour-white;
-//     @include heading-shadow;
-//     text-align: right;
-//     padding-right: $grid-gutter;
-//   }
-//   &__imagery {
-//     grid-area: imagery;
-//   }
-//   &__pic {
-//     overflow: hidden;
-//     width: 80%;
-//     border-radius: 1000rem;
-//     border: 1.5rem solid $colour-primary;
-//     & img {
-//       display: block;
-//       width: 100%;
-//     }
-//   }
-//   &__copy {
-//     grid-area: copy;
-//     & p {
-//       line-height: 2rem * 1.2;
-//       margin-bottom: $grid-gutter * 2.25;
-//     }
-//   }
-//   &__btn {
-//     @include btn;
-//     grid-area: btn;
-//     & a {
-//       text-decoration: none;
-//     }
-//   }
-// }
+.main__fonctionnement {
+  @include main-padding-section;
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.all-steps a {
+  text-decoration: none;
+}
+// SECTION FONCTIONNEMENT
+.fonctionnement__step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  &--content {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 25px 25px;
+    border-radius: 18px;
+    width: 300px;
+    color: black;
+    @include default-box-shadow;
+    p {
+      margin-left: 25px;
+    }
+    &:hover {
+      background-color: #f5edff;
+      .fas {
+        color: $colour-primary;
+      }
+    }
+  }
+  &--numero {
+    color: white;
+    background-color: $colour-primary;
+    border-radius: 50px;
+    width: 18px;
+    height: 22px;
+    padding-left: 8px;
+    padding-top: 3px;
+    transform: translateX(8px);
+  }
+}
+.fa-mobile-alt,
+.fa-list-ul,
+.fa-store {
+  color: #7e7e7e;
+  font-size: 20px;
+}
+// SECTION RESTAURANT
+.main__restaurants {
+  background: #f6f6f6;
+  padding: 35px 20px;
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.all-restaurants {
+  a {
+    color: black;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
+    &:visited {
+      color: black;
+    }
+  }
+}

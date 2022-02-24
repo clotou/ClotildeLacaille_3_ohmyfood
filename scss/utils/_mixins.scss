@@ -1,1 +1,15 @@
-// box-shadow
+@mixin default-box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
+}
+
+@mixin main-padding-section {
+  padding: 35px 20px;
+}
+
+@mixin card-image {
+  width: 100%;
+  height: 173px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+}

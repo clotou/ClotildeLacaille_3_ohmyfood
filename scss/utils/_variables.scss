@@ -1,3 +1,6 @@
 $colour-primary: #9356dc;
+$colour-primary-ligth: adjust-hue($colour-primary, 15deg);
 $colour-secondary: #ff79da;
+$colour-secondary-ligth: adjust-hue($colour-secondary, 15deg);
 $colour-tertiary: #99e2d0;
+$color-background-sections: #f6f4f4;

@@ -1,139 +1,5 @@
-/* _base */
-* {
-  margin: 0;
-  padding: 0;
-}
-/* _typography */
-body {
-  font-family: "Roboto", sans-serif;
-}
-/* _header */
-.header__logo {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #f6f4f4;
-}
-.header__logo img {
-  max-width: 160px;
-  margin: 15px 0 10px 0;
-}
-
-.header__localisation {
-  width: 100%;
-  background-color: #eaeaea;
-  box-shadow: inset 0px 2px 1px 0px rgb(0 0 0 / 10%);
-  padding: 15px 0 15px 0;
-}
-.fa-map-marker-alt {
-  transform: translateX(-20px);
-}
-.header__localisation-text {
-  display: flex;
-  justify-content: center;
-}
-.header__marketing {
-  background-color: #f6f6f6;
-  padding: 40px 35px 50px 35px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-}
-.header__marketing h2 {
-  padding: 0 10px 20px 10px;
-}
-.header__marketing small {
-  font-size: 18px;
-  font-weight: 200;
-  padding-bottom: 30px;
-}
-
-/* _button --> attention, bien changer les couleurs avec les variables*/
-.button {
-  /* width: 200px; */
-  color: white;
-  background: linear-gradient(to top, #9356dc, #ff79da);
-  border-radius: 50px;
-  padding: 17px 15px;
-}
-.header__marketing a {
-  margin: auto;
-  text-decoration: none;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
-}
-
-/* _home */
-.main__fonctionnement {
-  padding: 35px 20px;
-}
-
-.main__fonctionnement h2 {
-  margin-bottom: 30px;
-}
-
-/* _button */
-.all-steps a {
-  text-decoration: none;
-}
-.fonctionnement__step {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.step__content {
-  display: flex;
-  align-items: center;
-  background-color: #f6f6f6;
-  padding: 25px 25px;
-  border-radius: 18px;
-  width: 300px;
-  color: black;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
-}
-
-.step__content:hover {
-  background-color: #f5edff;
-}
-.step__content:hover .fas {
-  color: #9356dc;
-}
-
-.step__content:active {
-  background-color: #f5edff;
-}
-.step__content:active .fas {
-  color: #9356dc;
-}
-.step__numero {
-  color: white;
-  background-color: #9356dc;
-  border-radius: 50px;
-  width: 18px;
-  height: 22px;
-  padding-left: 8px;
-  padding-top: 3px;
-  transform: translateX(8px);
-}
-
-.fa-mobile-alt,
-.fa-list-ul,
-.fa-store {
-  color: #7e7e7e;
-  font-size: 20px;
-}
-.step__content p {
-  margin-left: 25px;
-}
-
-.main__restaurants {
-  background: #f6f6f6;
-  padding: 35px 20px;
-}
-
 /* _cards */
-.main__restaurants h2 {
+/* .main__restaurants h2 {
   margin-bottom: 30px;
 }
 .all-restaurants a {
@@ -150,7 +16,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
 }
 
-.restaurant__card-image-palette {
+.restaurant__card--image-palette {
   width: 100%;
   height: 173px;
   background-position-y: 100%;
@@ -159,7 +25,7 @@ body {
   background-repeat: no-repeat;
   border-radius: 15px 15px 0 0;
 }
-.restaurant__card-image-note {
+.restaurant__card--image-note {
   width: 100%;
   height: 173px;
   background-position-y: 61%;
@@ -168,7 +34,7 @@ body {
   background-repeat: no-repeat;
   border-radius: 15px 15px 0 0;
 }
-.restaurant__card-image-francaise {
+.restaurant__card--image-francaise {
   width: 100%;
   height: 173px;
   background-position-y: 100%;
@@ -177,7 +43,7 @@ body {
   background-repeat: no-repeat;
   border-radius: 15px 15px 0 0;
 }
-.restaurant__card-image-delice {
+.restaurant__card--image-delice {
   width: 100%;
   height: 173px;
   background-position-y: 100%;
@@ -187,7 +53,7 @@ body {
   border-radius: 15px 15px 0 0;
 }
 
-.restaurant-label {
+.restaurant__card--label {
   position: relative;
   left: 70%;
   top: 7%;
@@ -199,7 +65,7 @@ body {
   border-radius: 2px;
 }
 
-.restaurant__card-infos {
+.restaurant__card--infos {
   background-color: white;
   border-radius: 0 0 15px 15px;
   display: flex;
@@ -222,7 +88,7 @@ body {
   opacity: 0.6;
 }
 /* _footer */
-footer {
+/* footer {
   background-color: #353535;
   color: #ebe5e5;
   padding: 25px 20px 30px 20px;
@@ -253,9 +119,8 @@ ul .fas {
 
 ul li {
   margin-bottom: 5px;
-}
-
-header .fa-arrow-left {
+} */
+/* header .fa-arrow-left {
   position: absolute;
   margin-top: 20px;
   margin-left: 15px;
@@ -267,7 +132,7 @@ header a {
 
 .fa-arrow-left {
   font-size: 20px;
-}
+} */
 
 .image-menu {
   width: 100%;
@@ -297,10 +162,10 @@ header a {
   margin-right: 10px;
 }
 
-.section__menu-step {
+.section__menu--step {
   margin-bottom: 40px;
 }
-.section__menu-step h4 {
+.section__menu--step h4 {
   font-weight: 300;
   margin-bottom: 14px;
   margin-top: 30px;
@@ -314,7 +179,7 @@ h4:after {
   height: 3px;
 }
 
-.menu-step-choice {
+.section__menu--choice {
   border-radius: 16px;
   color: black;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
@@ -323,7 +188,7 @@ h4:after {
   display: flex;
   justify-content: space-between;
 }
-.choice-info {
+.section__section__menu--info {
   padding: 13px;
   display: flex;
   /* align-items: flex-end; */
@@ -335,7 +200,7 @@ h5 {
   margin-bottom: 5px;
 }
 
-.choice-text,
+.section__menu--text,
 h5,
 p {
   overflow: hidden;
@@ -345,14 +210,14 @@ p {
   /* width: 100%;
   transition: 0.5s ease-in-out; */
 }
-.prix-validation {
+.section__addition {
   display: flex;
 }
-.choice-text small {
+.section__menu--text small {
   font-size: 15px;
   font-weight: 300;
 }
-.prix {
+.section__addition--prix {
   font-weight: 500;
   margin-right: 5px;
   color: #353535;
@@ -369,15 +234,15 @@ p {
   align-items: center;
   transition: all 1s ease;
 }
-.menu-step-choice:hover .choice-validation {
+.section__menu--choice:hover .choice-validation {
   width: auto;
   transition: all 1s ease;
 }
-.menu-step-choice:hover.choice-info {
+.section__menu--choice:hover.section__section__menu--info {
   display: flex;
   justify-content: space-between;
 }
-.menu-step-choice:hover {
+.section__menu--choice:hover {
   display: flex;
   justify-content: space-between;
 }
