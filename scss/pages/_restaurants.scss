@@ -13,6 +13,7 @@
 .charonne {
   top: -50px;
 }
+
 .section__menu {
   background-color: #f6f4f4;
   padding: 40px 20px 40px 20px;
@@ -37,6 +38,7 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
+    animation: menuchoice 1s 1;
     &:hover {
       display: flex;
       justify-content: space-between;
@@ -53,12 +55,19 @@
   &--info {
     padding: 13px;
     display: flex;
-    /* align-items: flex-end; */
     justify-content: space-between;
   }
   &--text small {
     font-size: 15px;
     font-weight: 300;
+  }
+}
+@keyframes menuchoice {
+  from {
+    transform: scaleY(0.5);
+  }
+  to {
+    transform: scaleY(1);
   }
 }
 
@@ -81,10 +90,6 @@
     transition: all 1s ease;
   }
 }
-.fa-heart {
-  font-size: 25px;
-  margin-right: 10px;
-}
 
 h4:after {
   display: flex;
@@ -96,7 +101,7 @@ h4:after {
 }
 .section__menu--text,
 h5,
-p {
+small {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

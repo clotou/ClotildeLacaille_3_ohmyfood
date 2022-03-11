@@ -52,7 +52,28 @@
   }
 }
 
+.fa-solid {
+  z-index: 0;
+  // color: transparent;
+  -webkit-background-clip: text;
+  color: linear-gradient(to top, $colour-primary, $colour-secondary);
+}
 .fa-heart {
   font-size: 20px;
+}
+.far {
+  position: absolute;
   opacity: 0.6;
+}
+@media screen and (min-width: 992px) {
+  .restaurant__card {
+    min-width: 300px;
+  }
+}
+.main__restaurants a {
+  color: black;
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
 }
