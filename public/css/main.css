@@ -32,7 +32,7 @@ h5 {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px; }
   .button:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px;
-    background: linear-gradient(to top left, #b556dc, #ff79b9); }
+    background: linear-gradient(to top left, #9356dc, #ff79da); }
   .button--text {
     color: white; }
 
@@ -101,9 +101,21 @@ h5 {
     opacity: 0.7; }
 
 .fa-solid {
-  z-index: 0;
-  -webkit-background-clip: text;
-  color: linear-gradient(to top, #9356dc, #ff79da); }
+  opacity: 0; }
+  .fa-solid:hover, .fa-solid:active {
+    opacity: 1;
+    cursor: pointer;
+    background: linear-gradient(to top, #9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scaleY(1);
+    animation: heart-to-top 0.25s; }
+
+@keyframes heart-to-top {
+  0% {
+    transform: scaleY(0); }
+  100% {
+    transform: scaleY(1); } }
 
 .fa-heart {
   font-size: 20px; }
@@ -115,12 +127,6 @@ h5 {
 @media screen and (min-width: 992px) {
   .restaurant__card {
     min-width: 300px; } }
-
-.main__restaurants a {
-  color: black;
-  text-decoration: none; }
-  .main__restaurants a:visited {
-    color: black; }
 
 .header__logo {
   width: 100%;
@@ -348,9 +354,7 @@ small {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  flex-shrink: 1;
-  /* width: 100%;
-  transition: 0.5s ease-in-out; */ }
+  flex-shrink: 1; }
 
 .fa-check-circle {
   color: white;

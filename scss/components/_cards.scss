@@ -53,10 +53,26 @@
 }
 
 .fa-solid {
-  z-index: 0;
-  // color: transparent;
-  -webkit-background-clip: text;
-  color: linear-gradient(to top, $colour-primary, $colour-secondary);
+  opacity: 0;
+  &:hover,
+  &:active {
+    opacity: 1;
+    cursor: pointer;
+    background: linear-gradient(to top, $colour-primary, $colour-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // transform-origin: bottom;
+    transform: scaleY(1);
+    animation: heart-to-top 0.25s;
+  }
+}
+@keyframes heart-to-top {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 .fa-heart {
   font-size: 20px;
@@ -65,15 +81,9 @@
   position: absolute;
   opacity: 0.6;
 }
+
 @media screen and (min-width: 992px) {
   .restaurant__card {
     min-width: 300px;
-  }
-}
-.main__restaurants a {
-  color: black;
-  text-decoration: none;
-  &:visited {
-    color: black;
   }
 }
