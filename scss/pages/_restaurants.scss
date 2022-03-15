@@ -38,14 +38,15 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
+    transform-origin: top;
     animation: menuchoice 1s 1;
     &:hover {
       display: flex;
       justify-content: space-between;
     }
     &:hover .section__addition--validation {
-      width: auto;
-      transition: all 1s ease;
+      // width: auto;
+      transition: 1s ease;
     }
     &:hover.section__section__menu--info {
       display: flex;
@@ -56,6 +57,10 @@
     padding: 13px;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
   }
   &--text small {
     font-size: 15px;
@@ -64,10 +69,10 @@
 }
 @keyframes menuchoice {
   from {
-    transform: scaleY(0.5);
+    opacity: 0;
   }
   to {
-    transform: scaleY(1);
+    opacity: 1;
   }
 }
 
