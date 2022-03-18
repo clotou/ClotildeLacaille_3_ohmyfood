@@ -1,4 +1,5 @@
 .restaurant__card {
+  position: relative;
   display: block;
   border-radius: 15px;
   margin-bottom: 17px;
@@ -26,8 +27,8 @@
     background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   }
   &--label {
-    position: relative;
-    left: 70%;
+    position: absolute;
+    right: 2rem;
     top: 7%;
     background-color: $colour-tertiary;
     color: #008d47;

@@ -38,15 +38,18 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
-    transform-origin: top;
+    transform-origin: right;
     animation: menuchoice 1s 1;
     &:hover {
       display: flex;
       justify-content: space-between;
     }
     &:hover .section__addition--validation {
-      // width: auto;
-      transition: 1s ease;
+      animation: validation 1s ease-out backwards;
+      width: auto;
+    }
+    &:hover .fa-check-circle {
+      animation: check-circle 1s ease-out;
     }
     &:hover.section__section__menu--info {
       display: flex;
@@ -65,6 +68,22 @@
   &--text small {
     font-size: 15px;
     font-weight: 300;
+  }
+}
+@keyframes check-circle {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(-360);
+  }
+}
+@keyframes validation {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 @keyframes menuchoice {
@@ -105,8 +124,7 @@ h4:after {
   height: 3px;
 }
 .section__menu--text,
-h5,
-small {
+h5 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
