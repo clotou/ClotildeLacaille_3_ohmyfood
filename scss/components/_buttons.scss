@@ -3,18 +3,20 @@
   border-radius: 50px;
   padding: 17px 15px;
   margin: auto;
-  text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px;
+  display: flex;
+  justify-content: center;
+  max-width: 200px;
+  &--text {
+    color: white;
+  }
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px;
     background: linear-gradient(
       to top left,
-      $colour-primary,
-      $colour-secondary
+      $colour-primary-ligth,
+      $colour-secondary-ligth
     );
-  }
-  &--text {
-    color: white;
   }
 }
 

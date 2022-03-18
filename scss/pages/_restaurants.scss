@@ -136,3 +136,16 @@ h5 {
   font-size: 35px;
   margin: 0 20px;
 }
+
+@media screen and (min-width: 992px) {
+  .all-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section__menu--step {
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+}

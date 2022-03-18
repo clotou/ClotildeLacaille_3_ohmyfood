@@ -4,7 +4,7 @@
   border-radius: 15px;
   margin-bottom: 17px;
   max-width: 500px;
-  margin: 10px;
+  // margin: 10px;
   @include default-box-shadow;
   &--image-palette {
     @include card-image;
@@ -95,11 +95,13 @@
   .restaurant__card {
     min-width: 250px;
     max-width: 500px;
+    margin: 10px;
   }
 }
 @media screen and (min-width: 992px) {
   .restaurant__card {
     min-width: 250px;
     max-width: 500px;
+    margin: 10px;
   }
 }
