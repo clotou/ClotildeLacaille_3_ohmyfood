@@ -76,6 +76,17 @@
 }
 // Desktop
 @media screen and (min-width: 992px) {
+  main {
+    display: flex;
+  }
+  .left {
+    // max-width: 411px;
+    // min-width: 350px;
+  }
+  .right {
+    // width: 50%;
+    border-left: solid 1px white;
+  }
   .main__fonctionnement {
     display: flex;
     flex-direction: column;
@@ -90,6 +101,10 @@
   .all-restaurants {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    &--line {
+      display: flex;
+    }
   }
 }

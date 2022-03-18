@@ -45,7 +45,7 @@ h5 {
   border-radius: 15px;
   margin-bottom: 17px;
   max-width: 500px;
-  margin-right: auto;
+  margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px; }
   .restaurant__card--image-palette {
     width: 100%;
@@ -135,12 +135,13 @@ h5 {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .restaurant__card {
-    min-width: 300px; } }
+    min-width: 250px;
+    max-width: 500px; } }
 
 @media screen and (min-width: 992px) {
   .restaurant__card {
-    min-width: 300px;
-    margin-right: 20px; } }
+    min-width: 250px;
+    max-width: 500px; } }
 
 .header__logo {
   width: 100%;
@@ -267,6 +268,10 @@ footer {
     justify-content: space-between; } }
 
 @media screen and (min-width: 992px) {
+  main {
+    display: flex; }
+  .right {
+    border-left: solid 1px white; }
   .main__fonctionnement {
     display: flex;
     flex-direction: column;
@@ -279,7 +284,10 @@ footer {
   .all-restaurants {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; } }
+    justify-content: space-around;
+    align-items: center; }
+    .all-restaurants--line {
+      display: flex; } }
 
 .restaurant-title {
   font-family: "Shrikhand", cursive;
