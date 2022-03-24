@@ -38,20 +38,15 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
-    transform-origin: right;
-    animation: menuchoice 1s 1;
+    // test
+    overflow: hidden;
+    cursor: pointer;
+    animation: displayMenu 0.8s;
+    // animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
     &:hover {
-      display: flex;
-      justify-content: space-between;
-    }
-    &:hover .section__addition--validation {
-      animation: validation 1s ease-out backwards;
-      width: auto;
-    }
-    &:hover .fa-check-circle {
-      animation: check-circle 1s ease-out;
-    }
-    &:hover.section__section__menu--info {
       display: flex;
       justify-content: space-between;
     }
@@ -68,6 +63,24 @@
   &--text small {
     font-size: 15px;
     font-weight: 300;
+  }
+}
+
+@keyframes displayMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    // transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    // transform: scale(1);
+  }
+}
+@for $i from 0 to 4 {
+  .delay-#{$i} {
+    animation-delay: #{$i/10}s;
   }
 }
 @keyframes check-circle {
@@ -104,14 +117,33 @@
     display: flex;
     align-items: flex-end;
     margin: 0 20px 13px 0px;
+    &:hover + .section__addition--validation {
+      width: auto;
+      border-radius: 0 16px 16px 0;
+      background-color: $colour-tertiary;
+      display: flex;
+      align-items: center;
+      transition: all 1s ease;
+      animation: validation 1s ease-out backwards;
+      width: auto;
+    }
+    &:hover + .fa-check-circle {
+      animation: check-circle 1s ease-out;
+      width: auto;
+    }
+    // &:hover.section__section__menu--info {
+    //   display: flex;
+    //   justify-content: space-between;
+    // }
   }
   &--validation {
-    width: 0px;
-    border-radius: 0 16px 16px 0;
-    background-color: $colour-tertiary;
-    display: flex;
-    align-items: center;
-    transition: all 1s ease;
+    display: none;
+    // width: 0px;
+    // border-radius: 0 16px 16px 0;
+    // background-color: $colour-tertiary;
+    // display: flex;
+    // align-items: center;
+    // transition: all 1s ease;
   }
 }
 
@@ -131,10 +163,14 @@ h5 {
   flex-shrink: 1;
 }
 
+.section__menu--text {
+  margin: 10px 10px 10px 15px;
+}
 .fa-check-circle {
   color: white;
   font-size: 35px;
   margin: 0 20px;
+  width: 0px;
 }
 
 @media screen and (min-width: 992px) {

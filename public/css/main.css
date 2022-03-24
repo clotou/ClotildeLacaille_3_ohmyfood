@@ -331,17 +331,13 @@ footer {
     background-color: white;
     display: flex;
     justify-content: space-between;
-    transform-origin: right;
-    animation: menuchoice 1s 1; }
+    overflow: hidden;
+    cursor: pointer;
+    animation: displayMenu 0.8s;
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%; }
     .section__menu--choice:hover {
-      display: flex;
-      justify-content: space-between; }
-    .section__menu--choice:hover .section__addition--validation {
-      animation: validation 1s ease-out backwards;
-      width: auto; }
-    .section__menu--choice:hover .fa-check-circle {
-      animation: check-circle 1s ease-out; }
-    .section__menu--choice:hover.section__section__menu--info {
       display: flex;
       justify-content: space-between; }
   .section__menu--info {
@@ -355,6 +351,26 @@ footer {
   .section__menu--text small {
     font-size: 15px;
     font-weight: 300; }
+
+@keyframes displayMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.delay-0 {
+  animation-delay: 0s; }
+
+.delay-1 {
+  animation-delay: 0.1s; }
+
+.delay-2 {
+  animation-delay: 0.2s; }
+
+.delay-3 {
+  animation-delay: 0.3s; }
 
 @keyframes check-circle {
   from {
@@ -383,13 +399,20 @@ footer {
     display: flex;
     align-items: flex-end;
     margin: 0 20px 13px 0px; }
+    .section__addition--prix:hover + .section__addition--validation {
+      width: auto;
+      border-radius: 0 16px 16px 0;
+      background-color: #99e2d0;
+      display: flex;
+      align-items: center;
+      transition: all 1s ease;
+      animation: validation 1s ease-out backwards;
+      width: auto; }
+    .section__addition--prix:hover + .fa-check-circle {
+      animation: check-circle 1s ease-out;
+      width: auto; }
   .section__addition--validation {
-    width: 0px;
-    border-radius: 0 16px 16px 0;
-    background-color: #99e2d0;
-    display: flex;
-    align-items: center;
-    transition: all 1s ease; }
+    display: none; }
 
 h4:after {
   display: flex;
@@ -406,10 +429,14 @@ h5 {
   text-overflow: ellipsis;
   flex-shrink: 1; }
 
+.section__menu--text {
+  margin: 10px 10px 10px 15px; }
+
 .fa-check-circle {
   color: white;
   font-size: 35px;
-  margin: 0 20px; }
+  margin: 0 20px;
+  width: 0px; }
 
 @media screen and (min-width: 992px) {
   .all-menu {
