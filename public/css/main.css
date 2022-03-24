@@ -340,9 +340,10 @@ footer {
     .section__menu--choice:hover {
       display: flex;
       justify-content: space-between; }
-  .section__menu--info {
+  .section__menu--text {
     padding: 13px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     white-space: nowrap;
@@ -428,9 +429,6 @@ h5 {
   white-space: nowrap;
   text-overflow: ellipsis;
   flex-shrink: 1; }
-
-.section__menu--text {
-  margin: 10px 10px 10px 15px; }
 
 .fa-check-circle {
   color: white;

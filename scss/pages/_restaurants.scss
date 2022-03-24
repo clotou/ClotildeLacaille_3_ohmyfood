@@ -51,9 +51,10 @@
       justify-content: space-between;
     }
   }
-  &--info {
+  &--text {
     padding: 13px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     white-space: nowrap;
@@ -70,12 +71,10 @@
   0% {
     opacity: 0;
     transform: translateY(100px);
-    // transform: scale(0);
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
-    // transform: scale(1);
   }
 }
 @for $i from 0 to 4 {
@@ -163,9 +162,6 @@ h5 {
   flex-shrink: 1;
 }
 
-.section__menu--text {
-  margin: 10px 10px 10px 15px;
-}
 .fa-check-circle {
   color: white;
   font-size: 35px;
