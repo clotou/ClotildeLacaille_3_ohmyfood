@@ -40,7 +40,6 @@
     justify-content: space-between;
     // test
     overflow: hidden;
-    cursor: pointer;
     animation: displayMenu 0.8s;
     // animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
     animation-fill-mode: both;
@@ -82,30 +81,30 @@
     animation-delay: #{$i/10}s;
   }
 }
-@keyframes check-circle {
-  from {
-    transform: rotateX(0);
-  }
-  to {
-    transform: rotateX(-360);
-  }
-}
-@keyframes validation {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-@keyframes menuchoice {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+// @keyframes check-circle {
+//   from {
+//     transform: rotateX(0);
+//   }
+//   to {
+//     transform: rotateX(-360);
+//   }
+// }
+// @keyframes validation {
+//   from {
+//     transform: scaleX(0);
+//   }
+//   to {
+//     transform: scaleX(1);
+//   }
+// }
+// @keyframes menuchoice {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
 
 .section__addition {
   display: flex;
@@ -116,7 +115,8 @@
     display: flex;
     align-items: flex-end;
     margin: 0 20px 13px 0px;
-    &:hover + .section__addition--validation {
+    cursor: pointer;
+    &:hover .section__addition--validation {
       width: auto;
       border-radius: 0 16px 16px 0;
       background-color: $colour-tertiary;
@@ -126,27 +126,36 @@
       animation: validation 1s ease-out backwards;
       width: auto;
     }
-    &:hover + .fa-check-circle {
-      animation: check-circle 1s ease-out;
-      width: auto;
+    &:hover .fa-check-circle {
+      transform: rotate(0);
+      // animation: check-circle 1s ease-out;
+      // width: auto;
     }
     // &:hover.section__section__menu--info {
     //   display: flex;
     //   justify-content: space-between;
     // }
+    &:hover .section__addition--validationBlock {
+      transform: scaleX(1);
+    }
+  }
+  &--validationBlock {
+    transform: scaleX(0);
+    background-color: $colour-tertiary;
   }
   &--validation {
-    display: none;
-    // width: 0px;
-    // border-radius: 0 16px 16px 0;
-    // background-color: $colour-tertiary;
-    // display: flex;
-    // align-items: center;
+    border-radius: 0 16px 16px 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    &:hover {
+      transform: rotate(0);
+      background-color: $colour-tertiary;
+    }
     // transition: all 1s ease;
   }
 }
-
-h4:after {
+.fa-check-circle h4:after {
   display: flex;
   content: "";
   background: $colour-tertiary;
@@ -155,7 +164,8 @@ h4:after {
   height: 3px;
 }
 .section__menu--text,
-h5 {
+h5,
+small {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -167,6 +177,7 @@ h5 {
   font-size: 35px;
   margin: 0 20px;
   width: 0px;
+  transform: rotate(180deg);
 }
 
 @media screen and (min-width: 992px) {
