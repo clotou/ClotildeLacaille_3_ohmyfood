@@ -146,6 +146,51 @@ h5 {
     max-width: 500px;
     margin: 10px; } }
 
+.spinner-anim {
+  margin: 20px 0px 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; }
+
+.loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #b556dc;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.4), inset -2px -2px 1px rgba(255, 255, 255, 0.2), inset 10px 10px 10px rgba(0, 0, 0, 0.4); }
+
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #b556dc;
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2), inset 3px 3px 5px rgba(0, 0, 0, 0.5); }
+
+.loader span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: linear-gradient(-225deg, #9356dc, #ff79da, #ff79da);
+  filter: blur(20px);
+  z-index: -1;
+  animation: animate 0.5s linear infinite; }
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 .header__logo {
   width: 100%;
   display: flex;
@@ -309,6 +354,14 @@ footer {
 .charonne {
   top: -50px; }
 
+h4:after {
+  display: flex;
+  content: "";
+  background: #99e2d0;
+  margin-top: 5px;
+  width: 40px;
+  height: 3px; }
+
 .section__menu {
   background-color: #f6f4f4;
   padding: 40px 20px 40px 20px;
@@ -391,7 +444,7 @@ footer {
       transition: all 1s ease;
       animation: validation 1s ease-out backwards;
       width: auto; }
-    .section__addition--prix:hover .fa-check-circle {
+    .section__addition--prix:hover .icone-validation {
       transform: rotate(0); }
     .section__addition--prix:hover .section__addition--validationBlock {
       transform: scaleX(1); }
@@ -407,14 +460,6 @@ footer {
       transform: rotate(0);
       background-color: #99e2d0; }
 
-.fa-check-circle h4:after {
-  display: flex;
-  content: "";
-  background: #99e2d0;
-  margin-top: 5px;
-  width: 40px;
-  height: 3px; }
-
 .section__menu--text,
 h5,
 small {
@@ -423,7 +468,7 @@ small {
   text-overflow: ellipsis;
   flex-shrink: 1; }
 
-.fa-check-circle {
+.icone-validation {
   color: white;
   font-size: 35px;
   margin: 0 20px;
