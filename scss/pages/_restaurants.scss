@@ -123,14 +123,13 @@ h4:after {
     margin: 0 20px 13px 0px;
     cursor: pointer;
     &:hover .section__addition--validation {
-      width: auto;
+      // width: auto;
       border-radius: 0 16px 16px 0;
       background-color: $colour-tertiary;
       display: flex;
       align-items: center;
       transition: all 1s ease;
       animation: validation 1s ease-out backwards;
-      width: auto;
     }
     &:hover .icone-validation {
       transform: rotate(0);
@@ -146,12 +145,12 @@ h4:after {
     }
   }
   &--validationBlock {
-    transform: scaleX(0);
+    display: flex;
+    // transform: scaleX(0);
     background-color: $colour-tertiary;
   }
   &--validation {
     border-radius: 0 16px 16px 0;
-    background-color: white;
     display: flex;
     align-items: center;
     &:hover {
@@ -171,11 +170,10 @@ small {
   flex-shrink: 1;
 }
 
-.icone-validation {
+.fa-check-circle {
   color: white;
   font-size: 35px;
-  margin: 0 20px;
-  width: 0px;
+  margin: 0 15px;
   transform: rotate(180deg);
 }
 

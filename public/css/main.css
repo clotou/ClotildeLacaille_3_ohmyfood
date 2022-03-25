@@ -436,24 +436,21 @@ h4:after {
     margin: 0 20px 13px 0px;
     cursor: pointer; }
     .section__addition--prix:hover .section__addition--validation {
-      width: auto;
       border-radius: 0 16px 16px 0;
       background-color: #99e2d0;
       display: flex;
       align-items: center;
       transition: all 1s ease;
-      animation: validation 1s ease-out backwards;
-      width: auto; }
+      animation: validation 1s ease-out backwards; }
     .section__addition--prix:hover .icone-validation {
       transform: rotate(0); }
     .section__addition--prix:hover .section__addition--validationBlock {
       transform: scaleX(1); }
   .section__addition--validationBlock {
-    transform: scaleX(0);
+    display: flex;
     background-color: #99e2d0; }
   .section__addition--validation {
     border-radius: 0 16px 16px 0;
-    background-color: white;
     display: flex;
     align-items: center; }
     .section__addition--validation:hover {
@@ -468,11 +465,10 @@ small {
   text-overflow: ellipsis;
   flex-shrink: 1; }
 
-.icone-validation {
+.fa-check-circle {
   color: white;
   font-size: 35px;
-  margin: 0 20px;
-  width: 0px;
+  margin: 0 15px;
   transform: rotate(180deg); }
 
 @media screen and (min-width: 992px) {
