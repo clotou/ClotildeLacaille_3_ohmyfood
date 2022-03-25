@@ -13,3 +13,11 @@
   background-repeat: no-repeat;
   border-radius: 15px 15px 0 0;
 }
+
+@mixin spinner-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+}

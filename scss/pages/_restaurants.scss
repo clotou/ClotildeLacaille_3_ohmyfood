@@ -65,6 +65,7 @@ h4:after {
     white-space: nowrap;
     text-overflow: ellipsis;
     flex-shrink: 1;
+    width: 100%;
   }
   &--text small {
     font-size: 15px;
