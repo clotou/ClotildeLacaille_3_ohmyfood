@@ -195,7 +195,6 @@ h5 {
   z-index: 10;
   background: white;
   border-radius: 50%;
-  border: 1px solid #b556dc;
   box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2), inset 3px 3px 5px rgba(0, 0, 0, 0.5); }
 
 .loader span {
@@ -256,6 +255,7 @@ header .fa-arrow-left {
   font-size: 20px; }
 
 footer {
+  width: 100%;
   background-color: #353535;
   color: #ebe5e5;
   padding: 25px 20px 30px 20px; }
@@ -292,7 +292,9 @@ footer {
     background-color: #f6f6f6;
     padding: 25px 25px;
     border-radius: 18px;
-    width: 300px;
+    min-width: 300px;
+    max-width: 430px;
+    width: 100%;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px; }
     .fonctionnement__step--content p {
@@ -347,7 +349,8 @@ footer {
     width: 100%; }
   .main__fonctionnement {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
   .main__restaurants {
     display: flex;
     flex-wrap: wrap;
@@ -449,6 +452,12 @@ h4:after {
 .delay-3 {
   animation-delay: 0.3s; }
 
+@keyframes checkCircle {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+
 .section__addition {
   display: flex; }
   .section__addition--prix {
@@ -458,18 +467,16 @@ h4:after {
     display: flex;
     align-items: flex-end;
     margin: 0 20px 13px 0px;
+    transform-origin: right;
+    float: right;
     cursor: pointer; }
-    .section__addition--prix:hover .section__addition--validation {
+    .section__addition--prix:hover .section__addition--validationBlock {
+      width: 100%;
       border-radius: 0 16px 16px 0;
       background-color: #99e2d0;
       display: flex;
       align-items: center;
-      transition: all 1s ease;
-      animation: validation 1s ease-out backwards; }
-    .section__addition--prix:hover .icone-validation {
-      transform: rotate(0); }
-    .section__addition--prix:hover .section__addition--validationBlock {
-      transform: scaleX(1); }
+      transform-origin: right; }
   .section__addition--validationBlock {
     display: flex;
     background-color: #99e2d0; }
@@ -477,9 +484,6 @@ h4:after {
     border-radius: 0 16px 16px 0;
     display: flex;
     align-items: center; }
-    .section__addition--validation:hover {
-      transform: rotate(0);
-      background-color: #99e2d0; }
 
 .section__menu--text,
 h5,
@@ -493,7 +497,7 @@ small {
   color: white;
   font-size: 35px;
   margin: 0 15px;
-  transform: rotate(180deg); }
+  animation: checkCircle 1s linear infinite; }
 
 @media screen and (min-width: 992px) {
   .all-menu {

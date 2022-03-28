@@ -88,30 +88,14 @@ h4:after {
     animation-delay: #{$i/10}s;
   }
 }
-// @keyframes check-circle {
-//   from {
-//     transform: rotateX(0);
-//   }
-//   to {
-//     transform: rotateX(-360);
-//   }
-// }
-// @keyframes validation {
-//   from {
-//     transform: scaleX(0);
-//   }
-//   to {
-//     transform: scaleX(1);
-//   }
-// }
-// @keyframes menuchoice {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
+@keyframes checkCircle {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .section__addition {
   display: flex;
@@ -122,42 +106,34 @@ h4:after {
     display: flex;
     align-items: flex-end;
     margin: 0 20px 13px 0px;
+    transform-origin: right;
+    float: right;
     cursor: pointer;
-    &:hover .section__addition--validation {
-      // width: auto;
+    &:hover .section__addition--validationBlock {
+      width: 100%;
       border-radius: 0 16px 16px 0;
       background-color: $colour-tertiary;
       display: flex;
       align-items: center;
-      transition: all 1s ease;
-      animation: validation 1s ease-out backwards;
-    }
-    &:hover .icone-validation {
-      transform: rotate(0);
-      // animation: check-circle 1s ease-out;
-      // width: auto;
-    }
-    // &:hover.section__section__menu--info {
-    //   display: flex;
-    //   justify-content: space-between;
-    // }
-    &:hover .section__addition--validationBlock {
-      transform: scaleX(1);
+      transform-origin: right;
+      // transform: rotate(0);
+      // animation: checkCircle 1s ease-out;
+      // transition: all 1s ease;
     }
   }
   &--validationBlock {
     display: flex;
-    // transform: scaleX(0);
     background-color: $colour-tertiary;
+    // transform: translateX(100%);
   }
   &--validation {
     border-radius: 0 16px 16px 0;
     display: flex;
     align-items: center;
-    &:hover {
-      transform: rotate(0);
-      background-color: $colour-tertiary;
-    }
+    // &:hover {
+    //   transform: rotate(0);
+    //   background-color: $colour-tertiary;
+    // }
     // transition: all 1s ease;
   }
 }
@@ -175,7 +151,7 @@ small {
   color: white;
   font-size: 35px;
   margin: 0 15px;
-  transform: rotate(180deg);
+  animation: checkCircle 1s linear infinite;
 }
 
 @media screen and (min-width: 992px) {
