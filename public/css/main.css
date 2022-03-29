@@ -380,6 +380,10 @@ footer {
 .charonne {
   top: -50px; }
 
+#retauCoeur {
+  margin: 0 10px;
+  transform: translateY(5px); }
+
 h4:after {
   display: flex;
   content: "";
@@ -480,9 +484,8 @@ h4:after {
     width: 0px;
     display: flex;
     background-color: #99e2d0;
-    transform-origin: right; }
+    transform-origin: left; }
   .section__addition--validation {
-    border-radius: 0 16px 16px 0;
     display: flex;
     align-items: center; }
 
