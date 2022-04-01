@@ -319,8 +319,7 @@ footer {
   font-size: 20px; }
 
 .main__restaurants {
-  background: #f6f6f6;
-  padding: 35px 20px; }
+  background: #f6f6f6; }
   .main__restaurants h2 {
     margin-bottom: 30px; }
 
@@ -354,7 +353,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex-direction: column; }
+    flex-direction: column;
+    height: 100%; }
   .all-restaurants {
     display: flex;
     flex-wrap: wrap;
