@@ -476,7 +476,7 @@ h4:after {
     cursor: pointer; }
     .section__addition--prix:hover + .section__addition--validationBlock {
       width: auto;
-      transition-property: transform;
+      transition-property: transform backward;
       transition-duration: 1s;
       transform: translateX(0); }
   .section__addition--validationBlock {
