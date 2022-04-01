@@ -382,7 +382,7 @@ footer {
   width: 100%; }
 
 .charonne {
-  top: -50px; }
+  transform: translateY(-130px); }
 
 #retauCoeur {
   margin: 0 10px;
