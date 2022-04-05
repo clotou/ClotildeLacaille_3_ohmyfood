@@ -55,15 +55,20 @@ h4:after {
     margin-bottom: 15px;
     background-color: white;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    // justify-content: space-between;
     overflow: hidden;
     animation: displayMenu 0.8s;
     animation-fill-mode: both;
     transform: scale(0);
     max-width: 100%;
-    &:hover {
-      display: flex;
-      justify-content: space-between;
+    cursor: pointer;
+    &:hover + .fa-check-circle {
+      transform: rotate(1turn);
+      transition: transform 500ms ease-in-out;
+    }
+    &:hover + .section__addition--VBlock {
+    //   animation: scaleBlock 1s;
     }
   }
   &--text {
@@ -76,6 +81,10 @@ h4:after {
     text-overflow: ellipsis;
     flex-shrink: 1;
     width: 100%;
+    &:hover + .fa-check-circle {
+      transform: rotate(1turn);
+      transition: transform 500ms ease-in-out;
+    }
   }
   &--text small {
     font-size: 15px;
@@ -98,12 +107,21 @@ h4:after {
     animation-delay: #{$i/10}s;
   }
 }
-@keyframes checkCircle {
+// @keyframes checkCircle {
+//   from {
+//     transform: rotate(0);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+@keyframes scaleBlock {
   from {
-    transform: rotate(0);
+    width: 0px;
   }
   to {
-    transform: rotate(360deg);
+    width: auto;
   }
 }
 
@@ -115,31 +133,48 @@ h4:after {
     color: #353535;
     display: flex;
     align-items: flex-end;
-    margin: 0 20px 13px 0px;
+    margin: 0 20px;
     transform-origin: right;
     float: right;
-    cursor: pointer;
-    &:hover + .section__addition--validationBlock {
-      width: auto;
-      transition-property: transform backward;
-      transition-duration: 1s;
-      transform: translateX(0);
-    }
+    // &:hover + .section__addition--validationBlock {
+    //   transform: translateX(0);
+    // transition: transform 500ms ease-in-out;
+    // overflow: hidden;
+    // transition: transform 330ms ease-in-out;
+
+    // transition-property: transform backward;
+    // transition-duration: 1s;
+    // transform: translateX(0);
+    // test
+    // animation: scaleBlock 2s linear both;
+    // }
   }
   &--validationBlock {
-    transform: translateX(100%);
-    width: 0px;
+    transform: scaleX(100%);
+    transition-property: transform;
+    transition-duration: 500ms;
     display: flex;
     background-color: $colour-tertiary;
     transform-origin: left;
   }
   &--validation {
-    // border-radius: 0 16px 16px 0;
+    // background-color: $colour-tertiary;
+    overflow: hidden;
+    display: inline-block;
     display: flex;
     align-items: center;
   }
 }
-
+.section__addition--VBlock {
+  // position: absolute;
+  // transform: scaleX(100%);
+  // transition: transform 500ms ease-in-out;
+  // z-index: -10;
+  content: "";
+  height: 100%;
+  width: 86px;
+  background-color: $colour-tertiary;
+}
 .section__menu--text,
 h5,
 small {
@@ -150,21 +185,31 @@ small {
 }
 
 .fa-check-circle {
-  color: white;
+  // position: absolute;
+  // color: white;
   font-size: 35px;
   margin: 0 15px;
-  animation: checkCircle 1s linear infinite;
+  // z-index: 10;
+  right: 0;
+  // transform: scale(0);
 }
 
 @media screen and (min-width: 992px) {
   .all-menu {
     display: flex;
     flex-wrap: wrap;
+    &:hover + #iconCheck {
+      transform: scale(1) rotate(360deg);
+      transition: transform 500ms ease-in-out;
+    }
   }
   .section__menu--step {
     justify-content: left;
     display: flex;
     flex-direction: column;
     margin-right: auto;
+  }
+  .main__restaurants h2{
+    margin-top: 40px;
   }
 }

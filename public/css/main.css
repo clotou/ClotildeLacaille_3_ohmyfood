@@ -419,15 +419,16 @@ h4:after {
     margin-bottom: 15px;
     background-color: white;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     animation: displayMenu 0.8s;
     animation-fill-mode: both;
     transform: scale(0);
-    max-width: 100%; }
-    .section__menu--choice:hover {
-      display: flex;
-      justify-content: space-between; }
+    max-width: 100%;
+    cursor: pointer; }
+    .section__menu--choice:hover + .fa-check-circle {
+      transform: rotate(1turn);
+      transition: transform 500ms ease-in-out; }
   .section__menu--text {
     padding: 13px;
     display: flex;
@@ -438,6 +439,9 @@ h4:after {
     text-overflow: ellipsis;
     flex-shrink: 1;
     width: 100%; }
+    .section__menu--text:hover + .fa-check-circle {
+      transform: rotate(1turn);
+      transition: transform 500ms ease-in-out; }
   .section__menu--text small {
     font-size: 15px;
     font-weight: 300; }
@@ -462,11 +466,11 @@ h4:after {
 .delay-3 {
   animation-delay: 0.3s; }
 
-@keyframes checkCircle {
+@keyframes scaleBlock {
   from {
-    transform: rotate(0); }
+    width: 0px; }
   to {
-    transform: rotate(360deg); } }
+    width: auto; } }
 
 .section__addition {
   display: flex; }
@@ -476,24 +480,27 @@ h4:after {
     color: #353535;
     display: flex;
     align-items: flex-end;
-    margin: 0 20px 13px 0px;
+    margin: 0 20px;
     transform-origin: right;
-    float: right;
-    cursor: pointer; }
-    .section__addition--prix:hover + .section__addition--validationBlock {
-      width: auto;
-      transition-property: transform backward;
-      transition-duration: 1s;
-      transform: translateX(0); }
+    float: right; }
   .section__addition--validationBlock {
-    transform: translateX(100%);
-    width: 0px;
+    transform: scaleX(100%);
+    transition-property: transform;
+    transition-duration: 500ms;
     display: flex;
     background-color: #99e2d0;
     transform-origin: left; }
   .section__addition--validation {
+    overflow: hidden;
+    display: inline-block;
     display: flex;
     align-items: center; }
+
+.section__addition--VBlock {
+  content: "";
+  height: 100%;
+  width: 86px;
+  background-color: #99e2d0; }
 
 .section__menu--text,
 h5,
@@ -504,17 +511,21 @@ small {
   flex-shrink: 1; }
 
 .fa-check-circle {
-  color: white;
   font-size: 35px;
   margin: 0 15px;
-  animation: checkCircle 1s linear infinite; }
+  right: 0; }
 
 @media screen and (min-width: 992px) {
   .all-menu {
     display: flex;
     flex-wrap: wrap; }
+    .all-menu:hover + #iconCheck {
+      transform: scale(1) rotate(360deg);
+      transition: transform 500ms ease-in-out; }
   .section__menu--step {
     justify-content: left;
     display: flex;
     flex-direction: column;
-    margin-right: auto; } }
+    margin-right: auto; }
+  .main__restaurants h2 {
+    margin-top: 40px; } }
