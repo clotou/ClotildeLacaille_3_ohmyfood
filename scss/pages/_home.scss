@@ -74,7 +74,11 @@
   .all-restaurants {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    &--line {
+      display: flex;
+    }
   }
 }
 // Desktop
@@ -95,9 +99,9 @@
   }
   .main__restaurants {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
     height: 100%;
     padding: 0px;
   }
