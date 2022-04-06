@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0; }
 
+html {
+  height: 100vh; }
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  height: auto; }
+
 a,
 a:hover,
 a:focus,
@@ -426,9 +434,6 @@ h4:after {
     transform: scale(0);
     max-width: 100%;
     cursor: pointer; }
-    .section__menu--choice:hover + .fa-check-circle {
-      transform: rotate(1turn);
-      transition: transform 500ms ease-in-out; }
   .section__menu--text {
     padding: 13px;
     display: flex;
@@ -439,12 +444,10 @@ h4:after {
     text-overflow: ellipsis;
     flex-shrink: 1;
     width: 100%; }
-    .section__menu--text:hover + .fa-check-circle {
-      transform: rotate(1turn);
-      transition: transform 500ms ease-in-out; }
-  .section__menu--text small {
-    font-size: 15px;
-    font-weight: 300; }
+    .section__menu--text p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
 
 @keyframes displayMenu {
   0% {
@@ -466,62 +469,55 @@ h4:after {
 .delay-3 {
   animation-delay: 0.3s; }
 
-@keyframes scaleBlock {
-  from {
-    width: 0px; }
-  to {
-    width: auto; } }
+.prix {
+  font-weight: 500;
+  margin: 0 20px; }
 
-.section__addition {
-  display: flex; }
-  .section__addition--prix {
-    font-weight: 500;
-    margin-right: 5px;
-    color: #353535;
-    display: flex;
-    align-items: flex-end;
-    margin: 0 20px;
-    transform-origin: right;
-    float: right; }
-  .section__addition--validationBlock {
-    transform: scaleX(100%);
-    transition-property: transform;
-    transition-duration: 500ms;
-    display: flex;
-    background-color: #99e2d0;
-    transform-origin: left; }
-  .section__addition--validation {
-    overflow: hidden;
-    display: inline-block;
-    display: flex;
-    align-items: center; }
-
-.section__addition--VBlock {
-  content: "";
+.all-menu span {
+  background-color: #99E2D0;
+  padding: 20px 0;
   height: 100%;
-  width: 86px;
-  background-color: #99e2d0; }
+  display: flex;
+  align-items: center;
+  width: 0%;
+  justify-content: center;
+  visibility: hidden;
+  transition: all 0.3s; }
 
-.section__menu--text,
-h5,
-small {
+.all-menu h5 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   flex-shrink: 1; }
 
+.all-menu .section__menu--choice:hover span {
+  left: 80%;
+  visibility: visible;
+  width: 20%; }
+
+.all-menu .section__menu--choice:hover .fa-check-circle {
+  visibility: visible;
+  animation: checkCircle 300ms linear 300ms; }
+
+.all-menu .section__menu--choice:hover .prix {
+  left: 65%; }
+
 .fa-check-circle {
+  color: white;
+  margin: 0 20px;
   font-size: 35px;
-  margin: 0 15px;
-  right: 0; }
+  visibility: hidden; }
+
+@keyframes checkCircle {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 @media screen and (min-width: 992px) {
   .all-menu {
     display: flex;
     flex-wrap: wrap; }
-    .all-menu:hover + #iconCheck {
-      transform: scale(1) rotate(360deg);
-      transition: transform 500ms ease-in-out; }
   .section__menu--step {
     justify-content: left;
     display: flex;

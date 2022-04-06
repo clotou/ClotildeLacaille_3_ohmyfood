@@ -56,20 +56,12 @@ h4:after {
     background-color: white;
     display: flex;
     align-items: center;
-    // justify-content: space-between;
     overflow: hidden;
     animation: displayMenu 0.8s;
     animation-fill-mode: both;
     transform: scale(0);
     max-width: 100%;
     cursor: pointer;
-    &:hover + .fa-check-circle {
-      transform: rotate(1turn);
-      transition: transform 500ms ease-in-out;
-    }
-    &:hover + .section__addition--VBlock {
-    //   animation: scaleBlock 1s;
-    }
   }
   &--text {
     padding: 13px;
@@ -81,14 +73,11 @@ h4:after {
     text-overflow: ellipsis;
     flex-shrink: 1;
     width: 100%;
-    &:hover + .fa-check-circle {
-      transform: rotate(1turn);
-      transition: transform 500ms ease-in-out;
+    & p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
-  }
-  &--text small {
-    font-size: 15px;
-    font-weight: 300;
   }
 }
 
@@ -107,101 +96,75 @@ h4:after {
     animation-delay: #{$i/10}s;
   }
 }
-// @keyframes checkCircle {
-//   from {
-//     transform: rotate(0);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
 
-@keyframes scaleBlock {
-  from {
-    width: 0px;
-  }
-  to {
-    width: auto;
-  }
+.prix {
+  font-weight: 500;
+  margin: 0 20px;
 }
 
-.section__addition {
-  display: flex;
-  &--prix {
-    font-weight: 500;
-    margin-right: 5px;
-    color: #353535;
-    display: flex;
-    align-items: flex-end;
-    margin: 0 20px;
-    transform-origin: right;
-    float: right;
-    // &:hover + .section__addition--validationBlock {
-    //   transform: translateX(0);
-    // transition: transform 500ms ease-in-out;
-    // overflow: hidden;
-    // transition: transform 330ms ease-in-out;
-
-    // transition-property: transform backward;
-    // transition-duration: 1s;
-    // transform: translateX(0);
-    // test
-    // animation: scaleBlock 2s linear both;
-    // }
-  }
-  &--validationBlock {
-    transform: scaleX(100%);
-    transition-property: transform;
-    transition-duration: 500ms;
-    display: flex;
-    background-color: $colour-tertiary;
-    transform-origin: left;
-  }
-  &--validation {
-    // background-color: $colour-tertiary;
-    overflow: hidden;
-    display: inline-block;
+.all-menu {
+  & span {
+    background-color: #99E2D0;
+    padding: 20px 0;
+    height: 100%;
     display: flex;
     align-items: center;
+    width: 0%;
+    justify-content: center;
+    visibility: hidden;
+    transition: all 0.3s;
   }
-}
-.section__addition--VBlock {
-  // position: absolute;
-  // transform: scaleX(100%);
-  // transition: transform 500ms ease-in-out;
-  // z-index: -10;
-  content: "";
-  height: 100%;
-  width: 86px;
-  background-color: $colour-tertiary;
-}
-.section__menu--text,
-h5,
-small {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  flex-shrink: 1;
+
+  & h5 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+  }
+
+  & .section__menu--choice:hover {
+    & span {
+      left: 80%;
+      visibility: visible;
+      width: 20%;
+    }
+
+    & .fa-check-circle {
+      visibility: visible;
+      animation: checkCircle 300ms linear 300ms;
+    }
+
+    & .prix {
+      left: 65%;
+    }
+
+    // & .info {
+    //   width: 50%;
+    // }
+  }
 }
 
 .fa-check-circle {
-  // position: absolute;
-  // color: white;
+  color: white;
+  margin: 0 20px;
   font-size: 35px;
-  margin: 0 15px;
-  // z-index: 10;
-  right: 0;
-  // transform: scale(0);
+  visibility: hidden;
+}
+
+@keyframes checkCircle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (min-width: 992px) {
   .all-menu {
     display: flex;
     flex-wrap: wrap;
-    &:hover + #iconCheck {
-      transform: scale(1) rotate(360deg);
-      transition: transform 500ms ease-in-out;
-    }
   }
   .section__menu--step {
     justify-content: left;
@@ -213,3 +176,5 @@ small {
     margin-top: 40px;
   }
 }
+
+
